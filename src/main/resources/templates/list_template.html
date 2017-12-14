@@ -1,0 +1,43 @@
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link th:href="@{/css/EstiloEjercicio.css}" rel="stylesheet"/>
+	<title th:text="#{titleList}"></title>
+</head>
+
+<body>
+	
+	<div id="Seccion">
+		<h1> <p th:text="#{messageList}"></p> </h1>
+	</div>
+	
+	<form class="formulario2" th:action="@{/principal/busqueda3/}" method="get">
+	
+		<center>
+			<input type="text" name="optio"/>
+			
+			<input class="env" type="submit" th:value="#{sendButton}" id="boton"/>
+		</center>
+		
+	</form>
+	
+	<br/>
+	
+    <table class="center">
+    	<tr th:each="p : ${pelis}">
+    		<td> <a th:href="@{/principal/peliculaBD/{orderId}(orderId=${p.getImdbID()})}" th:text="${p.getTitle()}"> </a> </td>
+    		<td> <a sec:authorize="hasRole('ROLE_ADMIN')" th:href="@{/principal/peliculaBD/borrar/{orderId}(orderId=${p.getImdbID()})}" th:text="#{messageDelet}"> </a> </td>
+    		<td> <a sec:authorize="hasRole('ROLE_ADMIN')" th:href="@{/principal/peliculaBD/editar/{orderId}(orderId=${p.getImdbID()})}" th:text="#{messageEdit}"> </a> </td>
+    	</tr>
+    </table>
+    
+    <br/>
+    
+    <center>
+	    <input type="button" th:value="#{backButton}" onclick="location.href='/principal'"/>
+    </center>
+    
+</body>
+
+</html> 

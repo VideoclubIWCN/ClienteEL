@@ -1,0 +1,30 @@
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link th:href="@{/css/EstiloEjercicio.css}" rel="stylesheet"/>
+	<title th:text="#{productMessage}"></title>
+</head>
+
+<body>
+
+	
+	<!-- Envia los datos del formulario guardados en usuario "${usuario}" a la lista "@{fin}" -->
+	<div id="Seccion">
+		<h1> <p th:text="#{productMessage}"/> </h1>
+	</div>
+		
+	<form class="formulario2" th:action="@{/principal/busqueda2/}" method="get">
+	
+		<center>
+			<input type="text" name="optio"/>
+			
+			<input class="env" type="submit" th:value="#{sendButton}" id="boton"/>
+			<input id="atras" type="button" th:value="#{backButton}" onclick="location.href='/principal'"/>		
+		</center>
+		
+	</form>
+	
+</body>
+
+</html> 

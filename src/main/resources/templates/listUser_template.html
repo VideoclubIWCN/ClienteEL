@@ -1,0 +1,57 @@
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link th:href="@{/css/EstiloEjercicio.css}" rel="stylesheet"/>
+	<title th:text="#{titleListUser}"></title>
+</head>
+
+<body>
+	
+	<div id="Seccion">
+		<h1> <p th:text="#{titleListUser}"></p> </h1>
+	</div>
+	
+	<form class="formulario2" th:action="@{/principal/busqueda4/}" method="get">
+	
+		<center>
+			<input type="text" name="optio"/>
+			
+			<input class="env" type="submit" th:value="#{sendButton}" id="boton"/>
+		</center>
+		
+	</form>
+	
+	<br/>
+	
+	<div>
+		<center><input id="atrasUsuarios" type="button" th:value="#{backButton}" onclick="location.href='/principal'"/></center>
+	</div>
+	
+	<div>
+		<table class="usuarios">
+			<tr>
+	        	<td id="user" align="center" colspan="3" th:text="#{rolUser}"></td>
+	     	</tr>
+			<tr th:each="p : ${users}">
+		   		<td> <a th:href="@{/principal/usuario/{orderId}(orderId=${p.id})}" th:text="${p.nombre}"> </a> </td>
+		   		<td> <a th:href="@{/principal/usuario/borrar/{orderId}(orderId=${p.id})}" th:text="#{messageDelet}"> </a> </td>
+		   		<td> <a th:href="@{/principal/usuario/editar/{orderId}(orderId=${p.id})}" th:text="#{messageEdit}"> </a> </td>
+			</tr>
+		</table>
+		
+		<table class="administradores">
+			<tr>
+	        	<td id="admin" align="center" colspan="3" th:text="#{rolAdmin}"></td>
+	     	</tr>
+			<tr th:each="p : ${admins}">
+		   		<td> <a th:href="@{/principal/usuario/{orderId}(orderId=${p.id})}" th:text="${p.nombre}"> </a> </td>
+		   		<td> <a th:href="@{/principal/usuario/borrar/{orderId}(orderId=${p.id})}" th:text="#{messageDelet}"> </a> </td>
+		   		<td> <a th:href="@{/principal/usuario/editar/{orderId}(orderId=${p.id})}" th:text="#{messageEdit}"> </a> </td>
+			</tr>
+		</table>
+	</div>
+
+</body>
+
+</html> 

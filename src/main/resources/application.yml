@@ -1,0 +1,17 @@
+server:
+  port: 8443
+  ssl:
+    key-store: classpath:keystore.jks
+    key-password: root123
+spring:
+  jpa:
+    database: MYSQL
+    hibernate:
+      ddl-auto: validate
+
+  datasource:
+    url: jdbc:mysql://localhost/ejercicio
+    username: eva
+    password: 123456
+    driver-class-name: com.mysql.jdbc.Driver
+    

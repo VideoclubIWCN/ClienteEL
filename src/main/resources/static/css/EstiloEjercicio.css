@@ -1,0 +1,307 @@
+h1{
+	color: purple;
+	font-family: fantasy;
+	text-align: center;
+}
+
+h3{
+	font-size: 26px;
+	font-family: "Times New Roman";
+}
+
+.center{
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.formulario, .formulario2 {
+	font-family: sans-serif;
+	font-size: 12px;
+	padding-top: 54px;
+	margin: auto;
+	width: 600px;
+	border: 1px solid #CED5D7;
+	border-radius: 6px;
+	padding: 25px 2px 20px;
+	margin-top: 50px;
+	background-color: white;
+	box-shadow: 0px 5px 10px #B5C1C5, 0 0 0 10px #F0C0D0 inset;
+}
+
+.formulario2 label {
+	font-weight: bold;
+}
+
+.formulario label {
+	display: block;
+	font-weight: bold;
+}
+
+.formulario input[type="text"], .formulario input[type="password"], .formulario textarea, .formulario input[type="number"],
+.formulario2 input[type="text"], .formulario2 input[type="password"], .formulario2 textarea, .formulario input[type="number"] {
+	padding: 7px 6px;
+	width: 294px;
+	border: 1px solid #CED5D7;
+	box-shadow: 0 0 0 1px #fecfee;
+	margin: 5px 0;
+}
+
+.formulario input[type="text"]:focus, .formulario input[type="password"]:focus,
+.formulario textarea:focus, .formulario input[type="number"]:focus,
+.formulario2 input[type="text"]:focus, .formulario2 input[type="password"]:focus,
+.formulario2 textarea:focus, .formulario input[type="number"]:focus {
+	outline: none;
+	box-shadow: 0 0 0 1.5px #8c36a9;
+}
+
+button {
+	border: 1px solid #CED5D7;
+	box-shadow: 0 0 0 3px #EEF5F7;
+	padding: 8px 16px;
+	border-radius: 20px;
+	font-weight: bold;
+	text-shadow: 1px 1px 0px white;
+	background: #fedaf1;
+}
+
+button:hover {
+	background: #fdaae0;
+}
+
+button:active {
+	background: #fedaf1;
+}
+
+input[type="button"], input[type="submit"] {
+	border: 1px solid #CED5D7;
+	box-shadow: 0 0 0 1px #EEF5F7;
+	padding: 8px 16px;
+	border-radius: 20px;
+	font-weight: bold;
+	text-shadow: 1px 1px 0px white;
+	background: #fedaf1;
+
+}
+
+input[type="button"]:hover, input[type="submit"]:hover, input[type="button"]:active, input[type="submit"]:active {
+	background: #fdaae0;
+}
+
+#atrasUsuarios {
+	border: 1px solid #CED5D7;
+	box-shadow: 0 0 0 1px #EEF5F7;
+	padding: 8px 16px;
+	border-radius: 20px;
+	font-weight: bold;
+	text-shadow: 1px 1px 0px white;
+	background: #fedaf1;
+	margin-bottom: 20px;
+}
+
+#atrasUsuarios:hover, #atrasUsuarios:active {
+	background: #fdaae0;
+}
+
+#user, #admin {
+	font-weight: bold;
+}
+
+.env, #atras {
+	border: 1px solid #CED5D7;
+	box-shadow: 0 0 0 1px #EEF5F7;
+	padding: 8px 16px;
+	border-radius: 20px;
+	font-weight: bold;
+	text-shadow: 1px 1px 0px white;
+	background: #fedaf1;
+	margin-left: 10px;
+}
+
+.error {
+  max-width: 300px;
+  background-color: #BC1010;
+  padding: 6px 12px;
+  border-radius: 4px;
+  color: white;
+  font-weight: bold;
+  margin-left: 16px;
+  margin-top: 6px;
+  position: absolute;
+}
+
+.error:before {
+  content: '';
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+  border-right: 8px solid #BC1010;
+  border-left: 8px solid transparent;
+  left: -16px;
+  position: absolute;
+  top: 5px;
+}
+
+.center-product{
+	max-width: 1000px;
+	margin-top: 20px;
+	margin-left: 10px;
+	margin-right: auto;
+	border: 3px solid rgb(145, 0, 255);
+	border-style: dotted;
+}
+
+.center-product2{
+	max-width: 1000px;
+	margin-top: 20px;
+	margin-left: auto;
+	margin-right: auto;
+	border: 3px solid rgb(145, 0, 255);
+	border-style: dotted;
+}
+
+.info{
+	margin-top: 20px;
+	margin-left: auto;
+	margin-right: auto;
+	border: 3px solid rgb(145, 0, 255);
+	border-style: dotted;
+}
+
+.usuarios {
+	float: left;
+	margin-left: 500px;
+}
+
+.administradores {
+	float: right;
+	margin-right: 500px;
+}
+
+img{
+	width: 40px;
+	height: 40px;
+}
+
+#fotoPoster {
+	width: 50px;
+	height: 75px;
+}
+
+.detalles{
+	margin-left: 30px;
+	width: 225px;
+	height: 375px;
+}
+
+.ocultar {
+	display: none;
+}
+
+.denegado {
+	width: 400px;
+	height: 400px;
+	display: block;
+	margin: auto;
+}
+
+#Seccion{
+	background-color: rgb(240, 192, 208);
+}
+
+/* Pantalla pequeña */
+@media (max-width: 420px) {
+	h3{
+		font-size: 18px;
+	}
+	img{
+		width: 20px;
+		height: 20px;
+	}
+	
+	.denegado {
+		width: 200px;
+		height: 200px;
+		display: block;
+		margin: auto;
+	}
+	
+	.error {
+		max-width: 30px;
+		font-size: 8px;
+	}
+	
+	.formulario, .formulario2 {
+		width: 300px;
+	}
+	
+	.formulario label, .formulario2 label {
+		font-size: 12px;
+	}
+	
+	.formulario input[type="text"], .formulario input[type="password"], .formulario textarea, .formulario input[type="number"] {
+		width: 180px;
+	}
+	
+	.formulario2 input[type="text"], .formulario2 input[type="password"], .formulario2 textarea, .formulario input[type="number"] {
+		width: 160px;
+	}
+	
+	.usuarios {
+		margin-left: 30px;
+	}
+	
+	.administradores {
+		margin-right: 30px;
+	}
+	
+	.detalles {
+		width: 150px;
+		height: 250px;
+		margin-left: 125px;
+	}
+	
+	.center-product{
+		max-width: 475px;
+	}
+}
+
+/* Pantalla mediana */
+@media (min-width: 421px) and (max-width: 900px) {
+	h3{
+		font-size: 20px;
+	}
+	img{
+		width: 30px;
+		height: 30px;
+	}
+	.denegado {
+		width: 300px;
+		height: 300px;
+		display: block;
+		margin: auto;
+	}
+	.formulario, .formulario2 {
+		width: 500px;
+	}
+	
+	.formulario input[type="text"], .formulario input[type="password"], .formulario textarea, .formulario input[type="number"],
+	.formulario2 input[type="text"], .formulario2 input[type="password"], .formulario2 textarea, .formulario input[type="number"] {
+		width: 300px;
+	}
+	
+	.usuarios {
+		margin-left: 150px;
+	}
+	
+	.administradores {
+		margin-right: 150px;
+	}
+	
+	.detalles {
+		width: 150px;
+		height: 250px;
+	}
+	
+	.center-product{
+		max-width: 475px;
+	}
+}

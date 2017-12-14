@@ -1,0 +1,37 @@
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link th:href="@{/css/EstiloEjercicio.css}" rel="stylesheet"/>
+	<title th:text="#{listButton}"></title>
+</head>
+
+<body>
+
+	<div id="Seccion">
+		<h1> <p th:text="#{listButton}"/> </h1>
+	</div>
+
+	<table class="center">			
+ 			
+		<tr th:each="b: ${busqueda}">
+		    <td><a th:href="@{/principal/pelicula/{optio}(optio=${b.getImdbID()})}" th:text="${b.getTitle()}"></a></td>
+		    <td th:text="${b.getYear()}"></td>
+		    <td>
+		    	<img th:if="${b.imagen}" th:src="${b.getPoster()}" />
+		    	<img th:unless="${b.imagen}" class="ocultar" th:src="${b.getPoster()}" />
+		    	
+		    </td>
+		     <td> <a th:href="@{/principal/finOMDB/{optio}(optio=${b.getImdbID()})}" th:text="#{saveButton}"> </a> </td>
+		</tr>	
+		
+	</table>
+	
+	<center>
+		<input type="button" th:value="#{backButton}" onclick="history.back()"/>		
+	</center>
+		
+	
+</body>
+
+</html> 

@@ -1,0 +1,33 @@
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link th:href="@{/css/EstiloEjercicio.css}" rel="stylesheet"/>
+	<title th:text="#{userMessage}"></title>
+</head>
+
+<body>
+
+	<table class="info">
+		<tr>
+			<td><p th:text="#{name} + ': ' + ${nombre} " /></td>
+		</tr>
+	
+		<tr>
+			<td><p th:text="#{email} + ': ' + ${correo}"/></td>
+		</tr>
+		
+		<tr>
+			<td><p th:text="#{rol} + ': ' + ${listaRoles}"/></td>
+		</tr>
+		
+    </table>
+    
+    <br/>
+    <center>
+    	<input type="button" th:value="#{backButton}" onclick="location.href='/principal/listUser'"/>
+    </center>
+    
+</body>
+
+</html> 
