@@ -1,0 +1,75 @@
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link th:href="@{/css/EstiloEjercicio.css}" rel="stylesheet"/>
+	<title th:text="#{titleEdit}"></title>
+	<script src="/js/jquery.js"></script>
+	<script src="/js/modalAnadir.js"></script>
+</head>
+
+<body>
+
+	
+	<!-- Envia los datos del formulario guardados en producto "${producto}" a la lista "@{fin}" -->
+	<div id="Seccion">
+		<h1> <p th:text="#{editProductMessage} + ' ' + ${nombre}"/> </h1>
+	</div>
+	<form class="formulario" th:action="@{/principal/peliculaBD/modificar}" th:object="${peliculaConcreta}" method="post">		
+		<table class="center">
+			<tr>
+				<td><input type="hidden" th:field="*{imdbID}" id="imdbID"/></td>
+			</tr>
+			
+			<tr>
+				<td><label th:text="#{plot}"> </label></td>
+				<td><input type="text" th:field="*{plot}" id="plot"/></td>
+			</tr>
+			
+			<tr>
+				<td><label th:text="#{released}"> </label></td>
+				<td><input type="text" th:field="*{released}" id="released"/></td>
+			</tr>
+			
+			<tr>
+				<td><label th:text="#{director}"> </label></td>
+				<td><input type="text" th:field="*{director}" id="director"/></td>
+			</tr>
+			
+			<tr>
+				<td><label th:text="#{actors}"> </label></td>
+				<td><input type="text" th:field="*{actors}" id="actors"/></td>
+			</tr>
+			
+			<tr>
+				<td><label th:text="#{imdbRating}"> </label></td>
+				<td><input type="text" th:field="*{imdbRating}" id="imdbRating"/></td>
+			</tr>
+			
+			<tr>
+				<td><label th:text="#{runtime}"> </label></td>
+				<td><input type="text" th:field="*{runtime}" id="runtime"/></td>
+			</tr>
+			
+			<tr>
+				<td><label th:text="#{poster}"> </label></td>
+				<td><input type="text" th:field="*{poster}" id="poster"/></td>
+			</tr>
+			
+			<tr>
+				<td><label th:text="#{video}"> </label></td>
+				<td><input type="text" th:field="*{video}" id="video"/></td>
+			</tr>
+			
+		</table>
+		
+		<center>
+			<input type="submit" th:value="#{sendButton}" id="boton" />
+			<input type="button" th:value="#{backButton}" onclick="location.href='/principal/list'"/>		
+		</center>
+		
+	</form>
+	
+</body>
+
+</html>

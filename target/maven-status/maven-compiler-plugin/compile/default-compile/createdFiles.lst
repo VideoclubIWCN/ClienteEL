@@ -1,0 +1,15 @@
+com/iwcn/master/model/Usuario.class
+com/iwcn/master/configuration/CustomAuthenticationProvider.class
+com/iwcn/master/configuration/SecurityConfiguration.class
+com/iwcn/master/model/PeliculaConcreta.class
+com/iwcn/master/configuration/DatabaseLoader.class
+com/iwcn/master/services/interfaces/IPeliculaFeign.class
+com/iwcn/master/services/interfaces/Data.class
+com/iwcn/master/services/FeignDataService.class
+com/iwcn/master/model/BusquedaPelicula.class
+com/iwcn/master/model/Pelicula.class
+com/iwcn/master/model/Peli.class
+com/iwcn/master/model/Basica.class
+com/iwcn/master/PracticaClientMySql.class
+com/iwcn/master/services/interfaces/UsuarioRepository.class
+com/iwcn/master/controllers/AppControllerCliente.class

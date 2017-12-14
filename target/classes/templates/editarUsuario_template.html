@@ -1,0 +1,61 @@
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link th:href="@{/css/EstiloEjercicio.css}" rel="stylesheet"/>
+	<title th:text="#{titleEdit}"></title>
+	<script src="/js/jquery.js"></script>
+	<script src="/js/modalEditar.js"></script>
+</head>
+
+<body>
+
+	
+	<!-- Envia los datos del formulario guardados en usuario "${usuario}" a la lista "@{modificar}" -->
+	<div id="Seccion">
+		<h1> <p th:text="#{editUserMessage} + ' ' + ${nombre}"/> </h1>
+	</div>
+	<form class="formulario" th:action="@{/principal/usuario/modificar}" th:object="${usuario}" method="post">		
+		<table class="center">
+			<tr>
+				<td><input type="hidden" th:field="*{id}" id="id"/></td>
+			</tr>
+			
+			<tr>
+				<td><label th:text="#{name}"> </label></td>
+				<td><input type="text" th:field="*{nombre}" id="nombre"/></td>
+			</tr>
+			
+			<tr>
+				<td><label th:text="#{password}"> </label></td>
+				<td><input type="text" th:field="*{cont}" id="cont"/></td>
+			</tr>
+			
+			<tr>
+				<td><label th:text="#{email}"> </label></td>
+				<td><input type="text" th:field="*{correo}" id="correo"/></td>
+			</tr>
+			
+			<tr th:switch="*{rol}">
+				<td th:case="ROLE_USER">
+					<label th:text="#{rolUser}"></label><input type="radio" name="rol" value="ROLE_USER" checked="checked"/>
+					<label th:text="#{rolAdmin}"></label><input type="radio" name="rol" value="ROLE_ADMIN"/>
+				</td>
+				<td th:case="ROLE_ADMIN">
+					<label th:text="#{rolUser}"></label><input type="radio" name="rol" value="ROLE_USER"/>
+					<label th:text="#{rolAdmin}"></label><input type="radio" name="rol" value="ROLE_ADMIN" checked="checked"/>
+				</td>
+			</tr>
+	
+		</table>
+		
+		<center>
+			<input type="submit" th:value="#{sendButton}" id="boton"/>
+			<input type="button" th:value="#{backButton}" onclick="location.href='/principal/listUser'"/>		
+		</center>
+		
+	</form>
+	
+</body>
+
+</html>

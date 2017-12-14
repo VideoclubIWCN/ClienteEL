@@ -1,0 +1,15 @@
+/root/Programas/eclipse/WSEclipse/practica/PracticaClientMySql/src/main/java/com/iwcn/master/configuration/DatabaseLoader.java
+/root/Programas/eclipse/WSEclipse/practica/PracticaClientMySql/src/main/java/com/iwcn/master/controllers/AppControllerCliente.java
+/root/Programas/eclipse/WSEclipse/practica/PracticaClientMySql/src/main/java/com/iwcn/master/services/interfaces/UsuarioRepository.java
+/root/Programas/eclipse/WSEclipse/practica/PracticaClientMySql/src/main/java/com/iwcn/master/model/BusquedaPelicula.java
+/root/Programas/eclipse/WSEclipse/practica/PracticaClientMySql/src/main/java/com/iwcn/master/model/Basica.java
+/root/Programas/eclipse/WSEclipse/practica/PracticaClientMySql/src/main/java/com/iwcn/master/model/Pelicula.java
+/root/Programas/eclipse/WSEclipse/practica/PracticaClientMySql/src/main/java/com/iwcn/master/services/FeignDataService.java
+/root/Programas/eclipse/WSEclipse/practica/PracticaClientMySql/src/main/java/com/iwcn/master/model/Usuario.java
+/root/Programas/eclipse/WSEclipse/practica/PracticaClientMySql/src/main/java/com/iwcn/master/services/interfaces/IPeliculaFeign.java
+/root/Programas/eclipse/WSEclipse/practica/PracticaClientMySql/src/main/java/com/iwcn/master/services/interfaces/Data.java
+/root/Programas/eclipse/WSEclipse/practica/PracticaClientMySql/src/main/java/com/iwcn/master/model/PeliculaConcreta.java
+/root/Programas/eclipse/WSEclipse/practica/PracticaClientMySql/src/main/java/com/iwcn/master/model/Peli.java
+/root/Programas/eclipse/WSEclipse/practica/PracticaClientMySql/src/main/java/com/iwcn/master/configuration/CustomAuthenticationProvider.java
+/root/Programas/eclipse/WSEclipse/practica/PracticaClientMySql/src/main/java/com/iwcn/master/configuration/SecurityConfiguration.java
+/root/Programas/eclipse/WSEclipse/practica/PracticaClientMySql/src/main/java/com/iwcn/master/PracticaClientMySql.java

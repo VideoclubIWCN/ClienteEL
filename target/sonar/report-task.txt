@@ -1,0 +1,5 @@
+projectKey=com.iwcn.master:PracticaClientMySql
+serverUrl=http://localhost:9000
+dashboardUrl=http://localhost:9000/dashboard/index/com.iwcn.master:PracticaClientMySql
+ceTaskId=AWBGMPxRZwxgLeoBJIPq
+ceTaskUrl=http://localhost:9000/api/ce/task?id=AWBGMPxRZwxgLeoBJIPq

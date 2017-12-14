@@ -1,0 +1,99 @@
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link th:href="@{/css/EstiloEjercicio.css}" rel="stylesheet"/>
+	<title th:text="#{titleProd}"></title>
+</head>
+
+<body>
+
+	<div id="Seccion">
+		<h1> <p th:text="#{productMessage} + ': ' + ${title} " /> </h1>
+	</div>
+	
+	<!-- CUANDO EXISTE IMAGEN -->
+	
+	<img th:if="${imagen}" class="detalles" th:src="${poster}"/>
+	
+	<!-- CUANDO NO EXISTE IMAGEN -->
+	
+	<img th:unless="${imagen}" class="ocultar" th:src="${poster}"/>
+	
+	<!-- CUANDO EXISTE IMAGEN SE VE LA INFO A LA IZQUIERDA -->
+	
+	<table th:if="${imagen}" class="center-product" align="left">
+		
+		<tr>
+			<td><p th:text="#{plot} + ': ' + ${plot}"/></td>
+		</tr>
+		
+		<tr>
+			<td><p th:text="#{released} + ': ' + ${released}"/></td>
+		</tr>
+		
+		<tr>
+			<td><p th:text="#{director} + ': ' + ${director}"/></td>
+		</tr>
+		
+		<tr>
+			<td><p th:text="#{actors} + ': ' + ${actors}"/></td>
+		</tr>
+		
+		<tr>
+			<td><p th:text="#{imdbRating} + ': ' + ${imdbRating}"/></td>
+		</tr>
+		
+		<tr>
+			<td><p th:text="#{runtime} + ': ' + ${runtime}"/></td>
+		</tr>
+		
+		<tr>
+			<td><a th:text="#{video}" th:href="${video}"> </a></td>
+		</tr>
+		
+    </table>
+    
+    <!-- CUANDO NO EXISTE IMAGEN SE VE LA INFO EN EL CENTRO -->
+    
+	<table th:unless="${imagen}" class="center-product2">
+		
+		<tr>
+			<td><p th:text="#{plot} + ': ' + ${plot}"/></td>
+		</tr>
+		
+		<tr>
+			<td><p th:text="#{released} + ': ' + ${released}"/></td>
+		</tr>
+		
+		<tr>
+			<td><p th:text="#{director} + ': ' + ${director}"/></td>
+		</tr>
+		
+		<tr>
+			<td><p th:text="#{actors} + ': ' + ${actors}"/></td>
+		</tr>
+		
+		<tr>
+			<td><p th:text="#{imdbRating} + ': ' + ${imdbRating}"/></td>
+		</tr>
+		
+		<tr>
+			<td><p th:text="#{runtime} + ': ' + ${runtime}"/></td>
+		</tr>
+		
+		<tr>
+			<td><a th:text="#{video}" th:href="${video}"> </a></td>
+		</tr>
+		
+    </table>
+    
+    <br/>
+    
+    <center>
+    	<input type="button" th:value="#{backButton}" onclick="history.back()"/>	
+    </center>
+    
+</body>
+
+</html> 
